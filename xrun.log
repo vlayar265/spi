@@ -1,0 +1,99 @@
+xrun(64): 24.03-s004: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	24.03-s004: Started on Sep 04, 2025 at 16:43:28 EEST
+xrun
+	-access +rw
+	+gui
+	-timescale 1ns/1ns
+	-clean
+	-define FUNCTIONAL
+	rtl/verilog/fifo4.v
+	rtl/verilog/simple_spi_top.v
+	bench/verilog/spi_slave_model.v
+	bench/verilog/wb_master_model.v
+	bench/verilog/tst_bench_top.v
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+file: rtl/verilog/fifo4.v
+	module worklib.fifo4:v
+		errors: 0, warnings: 0
+file: rtl/verilog/simple_spi_top.v
+	module worklib.simple_spi_top:v
+		errors: 0, warnings: 0
+file: bench/verilog/spi_slave_model.v
+	module worklib.spi_slave_model:v
+		errors: 0, warnings: 0
+file: bench/verilog/wb_master_model.v
+	module worklib.wb_master_model:v
+		errors: 0, warnings: 0
+file: bench/verilog/tst_bench_top.v
+	module worklib.tst_bench_top:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tst_bench_top
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.fifo4:v <0x05b63ced>
+			streams:  12, words:  5040
+		worklib.simple_spi_top:v <0x7090a0a0>
+			streams:  44, words: 20124
+		worklib.tst_bench_top:v <0x7e60a189>
+			streams:   9, words: 17761
+		worklib.spi_slave_model:v <0x6335198d>
+			streams:  14, words:  5328
+		worklib.wb_master_model:v <0x3c80c790>
+			streams:   4, words:  9294
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                 6       5
+		Registers:              54      50
+		Scalar wires:           47       -
+		Vectored wires:         18       -
+		Always blocks:          23      19
+		Initial blocks:          3       3
+		Cont. assignments:      25      37
+		Pseudo assignments:      8       -
+		Process Clocks:         21       5
+		Simulation timescale:  1ns
+	Writing initial simulation snapshot: worklib.tst_bench_top:v
+xmsim: *W,NOMTDGUI: Multi-Threaded Dumping is disabled for interactive debug mode.
+
+-------------------------------------
+Relinquished control to SimVision...
+xcelium> 
+xcelium> source /eda/cadence/2024-25/RHELx86/XCELIUM_24.03.004/tools/xcelium/files/xmsimrc
+xcelium> run
+
+status:                    0 Testbench started
+
+
+
+INFO: WISHBONE MASTER MODEL INSTANTIATED (tst_bench_top.u0)
+
+status:                    5 done reset
+cpol:0, cpha:0, e:00
+cpol:0, cpha:0, e:01
+cpol:0, cpha:0, e:10
+cpol:0, cpha:0, e:11
+cpol:0, cpha:1, e:00
+cpol:0, cpha:1, e:01
+cpol:0, cpha:1, e:10
+cpol:0, cpha:1, e:11
+cpol:1, cpha:0, e:00
+cpol:1, cpha:0, e:01
+cpol:1, cpha:0, e:10
+cpol:1, cpha:0, e:11
+cpol:1, cpha:1, e:00
+cpol:1, cpha:1, e:01
+cpol:1, cpha:1, e:10
+cpol:1, cpha:1, e:11
+
+
+status:               517206 Testbench done
+Simulation complete via $finish(1) at time 517206 NS + 0
+./bench/verilog/tst_bench_top.v:214 	      $finish;
+xcelium> ^C
+xcelium> exit
+TOOL:	xrun(64)	24.03-s004: Exiting on Sep 04, 2025 at 16:44:51 EEST  (total: 00:01:23)
