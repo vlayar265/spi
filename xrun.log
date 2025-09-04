@@ -1,5 +1,5 @@
 xrun(64): 24.03-s004: (c) Copyright 1995-2024 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	24.03-s004: Started on Sep 04, 2025 at 16:43:28 EEST
+TOOL:	xrun(64)	24.03-s004: Started on Sep 04, 2025 at 17:19:22 EEST
 xrun
 	-access +rw
 	+gui
@@ -94,6 +94,44 @@ cpol:1, cpha:1, e:11
 status:               517206 Testbench done
 Simulation complete via $finish(1) at time 517206 NS + 0
 ./bench/verilog/tst_bench_top.v:214 	      $finish;
+xcelium> reset
+Loaded snapshot worklib.tst_bench_top:v
+xcelium> run
+
+status:                    0 Testbench started
+
+
+
+INFO: WISHBONE MASTER MODEL INSTANTIATED (tst_bench_top.u0)
+
+status:                    5 done reset
+cpol:0, cpha:0, e:00
+cpol:0, cpha:0, e:01
+cpol:0, cpha:0, e:10
+cpol:0, cpha:0, e:11
+cpol:0, cpha:1, e:00
+cpol:0, cpha:1, e:01
+cpol:0, cpha:1, e:10
+cpol:0, cpha:1, e:11
+cpol:1, cpha:0, e:00
+cpol:1, cpha:0, e:01
+cpol:1, cpha:0, e:10
+cpol:1, cpha:0, e:11
+cpol:1, cpha:1, e:00
+cpol:1, cpha:1, e:01
+cpol:1, cpha:1, e:10
+cpol:1, cpha:1, e:11
+
+
+status:               517206 Testbench done
+Simulation complete via $finish(1) at time 517206 NS + 0
+./bench/verilog/tst_bench_top.v:214 	      $finish;
+xcelium> ^C
+xcelium> ^C
+xcelium> ^C
+xcelium> ^C
+xcelium> ^C
+xcelium> ^C
 xcelium> ^C
 xcelium> exit
-TOOL:	xrun(64)	24.03-s004: Exiting on Sep 04, 2025 at 16:44:51 EEST  (total: 00:01:23)
+TOOL:	xrun(64)	24.03-s004: Exiting on Sep 04, 2025 at 17:19:50 EEST  (total: 00:00:28)

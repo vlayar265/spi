@@ -1,0 +1,24 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx8664.24.03.d
+-RUNMODE
+-DEFINE
+FUNCTIONAL
+rtl/verilog/fifo4.v
+rtl/verilog/simple_spi_top.v
+bench/verilog/spi_slave_model.v
+bench/verilog/wb_master_model.v
+bench/verilog/tst_bench_top.v
+-CDSLIB
+./xcelium.d/run.lnx8664.24.03.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx8664.24.03.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx8664.24.03.d/xllibs
+-ALLOWUNBOUND
